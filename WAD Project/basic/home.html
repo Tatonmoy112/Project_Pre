@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><h1>🎮 NextGen</h1></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Level Up Your Gaming Experience!</h2>
+                <p>Get your hands on the best consoles with exclusive offers!</p>
+                <a href="products.html"><button id="shop-now" class="btn">Shop Now</button></a>
+            </div>
+        </section>
+
+        <!-- Exclusive Offers Section -->
+        <section id="exclusive-offers">
+            <div class="offers-container">
+                <h2>Exclusive Offers Just for You!</h2>
+                <p>Discover amazing deals and discounts on the latest gaming consoles.</p>
+                <div class="offers-grid">
+                    <div class="offer-card" id="offer1">
+                        <h4>PlayStation 5 Deal</h4>
+                        <p>Get 10% off your first purchase.</p>
+                        <button class="claim-btn" onclick="claimOffer('PlayStation 5 Deal')">Claim Offer</button>
+                    </div>
+                    <div class="offer-card" id="offer2">
+                        <h4>Xbox Series X</h4>
+                        <p>Free shipping on orders over $100.</p>
+                        <button class="claim-btn" onclick="claimOffer('Xbox Series X')">Claim Offer</button>
+                    </div>
+                    <div class="offer-card" id="offer3">
+                        <h4>Nintendo Switch Bundle</h4>
+                        <p>Get a special bundle for just $399!</p>
+                        <button class="claim-btn" onclick="claimOffer('Nintendo Switch Bundle')">Claim Offer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Motive Section -->
+        <section class="company-motive">
+            <div class="motive-content">
+                <h2>Our Mission</h2>
+                <p>At NextGen, we’re dedicated to providing the best gaming experience with top-quality consoles and unbeatable deals. We’re here to revolutionize the way you game. Whether you’re a casual player or a competitive gamer, we’ve got something for everyone!</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; NextGen Console Store © 2024. All rights reserved. <br>
+                Discover the latest and greatest in gaming consoles at NextGen.
+                </p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
