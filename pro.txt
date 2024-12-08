@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - GameZone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🎮 GameZone</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2>Explore Our Gaming Consoles</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/5f595583198c75b43731bcaf/The-Sony-PS5/960x0.jpg?height=514&width=711&fit=bounds" alt="PlayStation 5">
+                    <h4>PlayStation 5</h4>
+                    <p>Experience lightning-fast loading and immersive graphics.</p>
+                    <p><strong>$499</strong></p>
+                    <button class="buy-now" data-product="PlayStation 5">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/xbox-series-x-with-powerful-performance-seamless-4k-gaming_1240525-90607.jpg" alt="Xbox Series X">
+                    <h4>Xbox Series X</h4>
+                    <p>Play the best exclusives and explore the ultimate performance.</p>
+                    <p><strong>$499</strong></p>
+                    <button class="buy-now" data-product="Xbox Series X">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/07/Switch-OLED-4-e1625579632195.jpg" alt="Nintendo Switch OLED">
+                    <h4>Nintendo Switch OLED</h4>
+                    <p>Portable gaming with a vibrant display.</p>
+                    <p><strong>$349</strong></p>
+                    <button class="buy-now" data-product="Nintendo Switch OLED">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/08/Steam-Deck-2-Might-Feature-4K-Resolution.jpg" alt="Steam Deck">
+                    <h4>Steam Deck</h4>
+                    <p>Portable PC gaming with an OLED screen.</p>
+                    <p><strong>$399</strong></p>
+                    <button class="buy-now" data-product="Steam Deck">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://smartdeal.com.bd/public/uploads/all/1Ejs4FjdXW0exYxMGpTrlhkhh3zsorxIfEl9peY6.webp" alt="Xbox Series S">
+                    <h4>Xbox Series S</h4>
+                    <p>Affordable next-gen gaming.</p>
+                    <p><strong>$299</strong></p>
+                    <button class="buy-now" data-product="Xbox Series S">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.startech.com.bd/image/cache/catalog/gaming-console/playstation/playstation-5-digital-edition/sony-playstation-5-digital-edition-01-500x500.jpg" alt="PlayStation 5 Digital Edition">
+                    <h4>PlayStation 5 Digital Edition</h4>
+                    <p>Power without the disc drive.</p>
+                    <p><strong>$399</strong></p>
+                    <button class="buy-now" data-product="PlayStation 5 Digital Edition">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://techdecode.co.za/wp-content/uploads/2024/06/ROG-Ally-X_med.webp" alt="Asus ROG Ally X">
+                    <h4>Asus ROG Ally X</h4>
+                    <p>High performance and clear display.</p>
+                    <p><strong>$399</strong></p>
+                    <button class="buy-now" data-product="Asus ROG Ally X">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/6034015/pexels-photo-6034015.png?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Nintendo Switch Lite">
+                    <h4>Nintendo Switch Lite</h4>
+                    <p>Compact handheld gaming</p>
+                    <p><strong>$199</strong></p>
+                    <button class="buy-now" data-product="Nintendo Switch Lite">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F06%2Fsony-validates-next-playstatio-console-1.jpg?q=75&w=800&cbr=1&fit=max" alt="PlayStation 4">
+                    <h4>PlayStation 4</h4>
+                    <p>Classic games with great performance.</p>
+                    <p><strong>$299 (used)</strong></p>
+                    <button class="buy-now" data-product="PlayStation 4">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.pngkey.com/png/full/130-1302923_xbox-one-s-png-xbox-one-s-pre.png" alt="Xbox One S">
+                    <h4>Xbox One S</h4>
+                    <p>Reliable and affordable gaming.</p>
+                    <p><strong>$199 (used)</strong></p>
+                    <button class="buy-now" data-product="Xbox One S">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 GameZone. Your Ultimate Gaming Destination.</p>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Order Details</h3>
+            <p id="productName"></p>
+            <form id="orderForm">
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+                
+                <label for="customerEmail">Email:</label>
+                <input type="email" id="customerEmail" placeholder="Enter your email" required>
+                
+                <label for="customerAddress">Address:</label>
+                <textarea id="customerAddress" placeholder="Enter your address" required></textarea>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+                
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

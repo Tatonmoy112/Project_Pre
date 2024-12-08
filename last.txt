@@ -1,0 +1,248 @@
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #212121;  /* Soft black/charcoal background */
+    color: #fff;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #333333;  /* Dark grey header */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: #ff4747;  /* Red logo text */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4747;  /* Red on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #ff4747, #333333);  /* Gradient from red to dark grey */
+    color: white;
+    padding: 100px 1rem 4rem;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+
+#hero .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#hero .btn {
+    background-color: #ff4747;  /* Red button */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hero .btn:hover {
+    transform: scale(1.1);
+    background-color: #e63946;  /* Darker red on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Exclusive Offers Section */
+#exclusive-offers {
+    padding: 4rem 1rem;
+    background-color: #333333;  /* Dark grey background */
+    text-align: center;
+    color: #fff;
+}
+
+#exclusive-offers h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff4747;  /* Red heading */
+}
+
+#exclusive-offers p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.offers-container {
+    opacity: 0;
+    animation: fadeInContainer 1.5s ease-out forwards;
+}
+
+.offers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    animation: fadeInGrid 1s ease-out forwards;
+}
+
+.offer-card {
+    background-color: #444444;  /* Soft grey for offer cards */
+    border-radius: 15px;
+    padding: 2rem;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInOffer 1s ease-out forwards;
+}
+
+.offer-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.offer-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.offer-card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.offer-card h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ff4747;
+}
+
+.offer-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+}
+
+.claim-btn {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.claim-btn:hover {
+    background-color: #e63946;  /* Darker red on hover */
+    transform: scale(1.1);
+}
+
+/* Company Motive Section */
+.company-motive {
+    padding: 6rem 1rem;
+    background: linear-gradient(135deg, #444444, #ff4747);  /* Soft grey to red gradient */
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.company-motive h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.company-motive p {
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInContainer {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInGrid {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInOffer {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+/* -------------------Products---------------------------- */

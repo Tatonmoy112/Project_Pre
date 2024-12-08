@@ -1,0 +1,99 @@
+
+// -------------------------
+
+
+
+// Product Filtering (for Products Page)
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const productCards = document.querySelectorAll(".product-card");
+
+if (filterButtons) {
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const category = button.getAttribute("data-category");
+
+            productCards.forEach(card => {
+                if (category === "all" || card.getAttribute("data-category") === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+}
+
+// Contact Form Validation (for Contact Page)
+const form = document.querySelector("form");
+if (form) {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+
+    form.addEventListener("submit", event => {
+        let isValid = true;
+
+        if (nameInput.value.trim() === "") {
+            alert("Name is required.");
+            isValid = false;
+        }
+
+        if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+            alert("Please enter a valid email address.");
+            isValid = false;
+        }
+
+        if (messageInput.value.trim().length < 10) {
+            alert("Message should be at least 10 characters long.");
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault(); // Stop form submission
+        }
+    });
+}
+
+
+
+
+
+
+
+// Order Modal Logic
+const buyButtons = document.querySelectorAll(".buy-now");
+const modal = document.getElementById("orderModal");
+const closeModal = document.querySelector(".close");
+const productNameField = document.getElementById("productName");
+const orderForm = document.getElementById("orderForm");
+
+// Show modal on "Buy Now" click
+buyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const productName = button.getAttribute("data-product");
+        productNameField.textContent = `Ordering: ${productName}`;
+        modal.style.display = "block"; // Open the modal immediately
+    });
+});
+
+// Close modal on 'X' click
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none"; // Hide the modal
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener("click", event => {
+    if (event.target === modal) {
+        modal.style.display = "none"; // Hide the modal
+    }
+});
+
+// Prevent default form submission and reset form
+orderForm.addEventListener("submit", event => {
+    event.preventDefault(); // Prevent page reload
+    modal.style.display = "none"; // Close modal after submission
+    orderForm.reset(); // Reset form fields
+});
